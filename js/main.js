@@ -15,4 +15,8 @@ requirejs(['simpleObj', 'simpleObj', 'console'], function (simpleObj1, simpleObj
   console.log(simpleObj1 === simpleObj2);
 });
 
+requirejs(['simpleObj', 'console'], function (simpleObj, console) {
+  console.log(simpleObj);
+});
+
 
