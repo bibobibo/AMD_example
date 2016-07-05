@@ -6,7 +6,7 @@ requirejs.config({
 });
 
 
-requirejs(['person'], function (Person) {
+requirejs(['person', 'console'], function (Person) {
   var person = Person("Brant", 100);
   person.selfIntroduce();
 });
