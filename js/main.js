@@ -6,19 +6,13 @@ requirejs.config({
 });
 
 
-requirejs(['person', 'person', 'console'], function (PersonOne, PersonTwo, console) {
-  var personOneInstance = PersonOne("Brant", 100);
-  personOneInstance.selfIntroduce();
+requirejs(['simpleObj', 'simpleObj', 'console'], function (simpleObj1, simpleObj2, console) {
+  console.log(simpleObj1);
+  console.log(simpleObj2);
+  simpleObj1.motto = "Just give up!!!";
+  console.log(simpleObj2);
 
-  var personTwoInstance = PersonTwo("Larry", 5);
-  personTwoInstance.selfIntroduce();
-
-  var personThreeInstance = PersonOne("Tom", 27);
-  personThreeInstance.selfIntroduce();
-
-  personThreeInstance.growUp();
-  personThreeInstance.selfIntroduce();
-  console.log("PersonOne === PersonTwo ? " + (PersonOne === PersonTwo));
+  console.log(simpleObj1 === simpleObj2);
 });
 
 
